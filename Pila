@@ -1,0 +1,32 @@
+/*
+ Michelle Bartra 14384
+ UVG Algoritmos y Estructura de Datos
+ Ejercicio 2: Calculadora
+ Clase pila
+ */
+import java.util.ArrayList;
+
+
+public class Pila {
+    //Se hace la lista de tamaño indefinido
+    private ArrayList<Object> pila = new ArrayList();
+    
+    // PUSH
+    // Se hace un push a la pila para ingresar un nuevo elemneto
+    
+    public void push (Object datoin){
+        pila.add(datoin);}
+    
+    //POP
+    //Regresa lo primero que hay en la pila
+    // y lo elimina de la pila
+    
+    public Object pop(){
+        boolean vacio = pila.isEmpty(); 	//pone si true o false si esta vacia o no
+        if (vacio){				//si esta vacio, devuelve nada
+            return null;}
+        else{
+            Object first = pila.get(0);		//guarda el primer objeto en la pila
+            pila.remove(first); 			//se borra el elemento de la pila
+            return first;}	
+    }}
